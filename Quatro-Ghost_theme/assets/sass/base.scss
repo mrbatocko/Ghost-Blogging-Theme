@@ -72,7 +72,7 @@ a {
     border-bottom: 10vw solid #fff;
     content: "";
     display: block;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1024px) {
       display: none;
     }
   }

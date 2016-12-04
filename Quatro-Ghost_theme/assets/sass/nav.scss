@@ -64,6 +64,17 @@
 .activate__mobile__nav-toggled {
   .bar {
     background: #fff !important;
+    &:first-child {
+      transform: rotate(-45deg);
+      transform-origin: right;
+    }
+    &:nth-child(2) {
+      transform: translate3d(100px, 0, 0);
+    }
+    &:last-child {
+      transform: translate3d(0, 3px, 0) rotate(45deg);
+      transform-origin: right;
+    }
   }
 }
 .tag-template .activate__mobile__nav .bar, .author-template .activate__mobile__nav .bar {
