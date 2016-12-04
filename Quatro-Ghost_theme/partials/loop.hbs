@@ -1,0 +1,16 @@
+{{!< default}}
+<section class="articles__wrapper">
+  {{#foreach posts}}
+  <article class="article__container{{^if image}}-nocover{{/if}} {{#if featured}}featured-article{{/if}}">
+    {{#if image}}
+    <a href="{{url}}"><div class="article__cover {{#if featured}}featured-cover{{/if}}" style="background-image: url({{image}})">{{#if featured}}<h2 class="featured__label">Featured</h2>{{/if}}</div></a>
+    {{/if}}
+    <div class="article__header{{^if image}}-nocover{{/if}}">
+      <a href="{{url}}"><h3 class="article__title">{{title}}{{^if image}}{{#if featured}}<span class="nocover__featured__label"> - featured</span> {{/if}}{{/if}}</h3></a>
+      <p class="exc">{{excerpt words="60"}}</p>
+    </div>
+    <a class="article__link" href="{{url}}" title="Go to post">Discover more &rarr;</a>
+  </article>
+  {{/foreach}}
+  {{pagination}}
+</section>

@@ -1,0 +1,35 @@
+{{!< default}}
+{{#post}}
+<a class="back__to__home" href="/">&larr; HOME</a>
+<header class="home__header" style="background-image: url({{image}})">
+  <div class="home__meta">
+    <h1 class="header__meta__title">{{title}}</h1>
+    <span class="tags">{{#if tags}}{{tags separator=" | "}}{{/if}}</span><br>
+    <span class="date__author">{{date timeago="true"}} by {{#author}}<a href="{{url}}">{{name}}</a>{{/author}}</span>
+  </div>
+</header>
+<main class="post__content">
+  {{content}}
+  <div class="social__links">
+    <a class="icon-twitter" href="#"href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a class="icon-facebook" href="#" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a class="icon-google-plus" href="#" href="https://plus.google.com/share?url={{url absolute="true"}}"
+        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+  <div class="post__comments">
+    {{> disqus-comments}}
+  </div>
+  <div class="post__nav">
+    {{#next_post}}
+    <a href="{{url}}" title="Previous post">
+      <div class="post__nav__item" style="background-image: url({{image}})">
+        <p>Next post</p>
+        <h4>{{title}}</h4>
+      </div>
+    </a>
+    {{/next_post}}
+  </div>
+</main>
+{{/post}}

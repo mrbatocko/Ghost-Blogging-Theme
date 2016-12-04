@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{!Page metadata}}
+    <meta charset="utf-8">
+    <title>{{@blog.title}}</title>
+    <link rel="shortcut icon" href="{{asset "/images/favicon.ico"}}">
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    {{!Styles}}
+    <link rel="stylesheet" href="{{asset "/css/styles.min.css"}}" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset "css/font-awesome-4.6.3/css/font-awesome.min.css"}}" media="screen">
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}}">
+    {{navigation}}
+    <div class="main__container">
+      {{{body}}}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{asset "/javascripts/base.js"}}"></script>
+    {{ghost_foot}}
+  </body>
+</html>
