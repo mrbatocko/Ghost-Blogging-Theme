@@ -11,6 +11,7 @@
   }
   @media screen and (max-width: 600px) {
     width: 100%;
+    padding: 3rem 0 0 0;
   }
 }
 .author__meta {
@@ -31,10 +32,6 @@
   @media screen and (max-width: 768px) {
 
   }
-}
-.author__social {
-  display: flex;
-  justify-content: space-around;
 }
 .author__avatar {
   width: 7rem;

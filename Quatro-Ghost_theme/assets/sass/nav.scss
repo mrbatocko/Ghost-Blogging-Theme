@@ -50,7 +50,7 @@
   right: 1rem;
   display: none;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
   @media screen and (max-width: 600px) {
     display: block;
   }
@@ -61,26 +61,13 @@
     display: block;
   }
 }
+.activate__mobile__nav-toggled {
+  .bar {
+    background: #fff !important;
+  }
+}
 .tag-template .activate__mobile__nav .bar, .author-template .activate__mobile__nav .bar {
   background: rgba(0,0,0,.8);
-}
-.deactivate__mobile__nav {
-  width: 30px;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: none;
-  cursor: pointer;
-  z-index: 2;
-  @media screen and (max-width: 600px) {
-    display: block;
-  }
-  .bar {
-    height: 3px;
-    margin: 6px;
-    display: block;
-    background: #fff;
-  }
 }
 .nav-active {
   display: block;

@@ -4,4 +4,7 @@
   h1 {
     margin: 0;
   }
+  @media screen and (max-width: 600px) {
+    padding-top: 3rem;
+  }
 }

@@ -1,5 +1,5 @@
 {{!< default}}
-<header class="home__header" style="background-image: url({{@blog.cover}})">
+<header class="home__header" {{#if @blog.cover}} style="background-image: url({{@blog.cover}});"{{else}} style="background: #111;" {{/if}}>
   <a href="/">
   <div class="logo" style="background-image: url({{@blog.logo}})">
   </div>

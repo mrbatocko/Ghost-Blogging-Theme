@@ -1,7 +1,7 @@
 {{!< default}}
 {{#post}}
 <a class="back__to__home" href="/">&larr; HOME</a>
-<header class="home__header" style="background-image: url({{image}})">
+<header class="home__header" {{#if image}} style="background-image: url({{image}});"{{else}} style="background: #444;" {{/if}}>
   <div class="home__meta">
     <h1 class="header__meta__title">{{title}}</h1>
     <span class="tags">{{#if tags}}{{tags separator=" | "}}{{/if}}</span><br>

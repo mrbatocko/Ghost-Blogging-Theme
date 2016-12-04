@@ -11,7 +11,10 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @media screen and (max-width: 1024px) {
-  font-size: 0.95em;
+  font-size: 15px;
+  }
+  @media screen and (max-width: 768px) {
+  font-size: 14px;
   }
 }
 body {
@@ -25,13 +28,16 @@ h1, h2, h3, h4 {
   color: rgba(0,0,0,.7);
 }
 h1 {
-  font-size: 3.998em;
+  font-size: 3.998rem;
+  @media screen and (max-width: 500px) {
+  font-size: 2.827rem;
+  }
 }
-h2 {font-size: 2.827em;}
+h2 {font-size: 2.827rem;}
 
-h3 {font-size: 1.999em;}
+h3 {font-size: 1.999rem;}
 
-h4 {font-size: 1.414em;}
+h4 {font-size: 1.414rem;}
 p {
   line-height: 1.8;
 }
@@ -39,16 +45,9 @@ a {
   text-decoration: none;
   color: rgba(#3BADA6,1);
 }
-.main__container {
-
-}
-.main__container-active {
-
-}
 .home__header {
   position: relative;
-  padding: 12rem 0;
-  background-color: rgba(0,0,0,.6);
+  padding: 18rem 0;
   background-position: center;
   background-size: cover;
   filter: grayscale(100%);
@@ -67,13 +66,12 @@ a {
   &:after {
     position: absolute;
     bottom: 0;
-    left: -3rem;
-    right: -3rem;
-    height: 40%;
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-bottom: 10vw solid #fff;
     content: "";
     display: block;
-    background: #fff;
-    transform: rotate(-3deg) translate3d(0, 40%, 0);
     @media screen and (max-width: 767px) {
       display: none;
     }
